@@ -7,11 +7,13 @@ body, html {
 }
 
 .video-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; 
-    overflow: hidden; 
-}
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background: url('video/video-output-2F9752DC-B88E-489D-A5EA-713CF0B054FD.MOV')repeat center center/cover;
+    }
+
 
 .background-video {
     position: absolute;
@@ -19,8 +21,9 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    z-index: -1; 
+    object-fit: cover;
+    -webkit-object-fit: cover; /* For Safari */
+    
 }
 
 @font-face {
