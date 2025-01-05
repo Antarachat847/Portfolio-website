@@ -35,7 +35,7 @@ body, html {
     left: 50%; 
     transform: translateX(-50%); 
     text-align: center;
-    color: rgb(252, 0, 0);
+    color: rgb(189, 0, 252);
     font-family: 'Pinkend', sans-serif;
     z-index: 1;
     width: auto;
