@@ -24,21 +24,25 @@ body, html {
     z-index: -1; /* Push video behind text */
 }
 
-
+@font-face {
+    font-family: 'Pinkend';
+    src: url('font/pinkend.regular.ttf') format('truetype'); 
+}
 .overlay-text {
     position: absolute;
-    top: 50px;  /* Add some spacing from the top */
+    top: 50px;  
     left: 180px;
-    transform: translate(-50%, -50%); /* Center the text */
+    transform: translate(-50%, -50%); 
     text-align: center;
     color: rgb(252, 0, 0);
-    font-family: 'Arial', sans-serif;
+    font-family: 'Pinkend', sans-serif;
     z-index: 1;
-    width: 90%; /* Add some space around the text */
+    width: 90%;
 }
 
 .overlay-text h1 {
-    font-size: 2rem; 
+    font-size: 1.6rem; 
+    letter-spacing: 5px;
     margin: 0;
 }
 
