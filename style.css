@@ -1,69 +1,100 @@
+/* Reset styles */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
+/* Parallax container */
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Video container and video styling */
 .video-container {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        background: url('video/video-output-2F9752DC-B88E-489D-A5EA-713CF0B054FD.MOV')repeat center center/cover;
-    }
-
-
-.background-video {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: url('video/video-output-2F9752DC-B88E-489D-A5EA-713CF0B054FD.MOV')repeat center center/cover;
+
+}
+
+.background-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     -webkit-object-fit: cover; /* For Safari */
-    
 }
 
-@font-face {
-    font-family: 'Pinkend';
-    src: url('font/pinkend.regular.ttf') format('truetype'); 
-}
-
+/* Overlay text (Antara Chatterjee) */
 .overlay-text {
-    position: absolute;
-    top: 20px; 
-    padding-left: 10px;
-    left: 50%; 
-    transform: translateX(-50%); 
+    position: fixed;
+    top: 20px; /* Fixed at the top */
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    color: rgb(248, 14, 14);
-    font-family: 'Pinkend', sans-serif;
+    color: rgb(248, 14, 14); /* Red text */
+    font-family: 'IM Fell English', serif;
     z-index: 1;
-    width: auto;
 }
 
 .overlay-text h1 {
-    font-size: 2.3vw; /* Use viewport width for dynamic sizing */
+    font-size: 2.3vw;
     letter-spacing: 8px;
     margin: 0;
 }
 
+/* Red section */
+.red-section {
+    background-color: rgb(235, 0, 0); /* Entire section is red */
+    color: white; /* White text for contrast */
+    text-align: center;
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-family: 'IM Fell English', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Responsive text sizes */
 @media screen and (max-width: 1200px) {
     .overlay-text h1 {
-        font-size: 2vw; 
+        font-size: 2vw;
+    }
+
+    .red-section {
+        font-size: 1.5rem;
     }
 }
 
 @media screen and (max-width: 768px) {
     .overlay-text h1 {
-        font-size: 2rem; 
+        font-size: 1.6rem;
+    }
+
+    .red-section {
+        font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 480px) {
     .overlay-text h1 {
-        font-size: 1.7rem; 
+        font-size: 1.3rem;
+    }
+
+    .red-section {
+        font-size: 1rem;
     }
 }
