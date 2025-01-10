@@ -17,9 +17,18 @@ body, html {
     width: 100%;
     text-align: center;
     color: red;
-    font-family: 'IM Fell English', serif;
-    letter-spacing: 8px;
+    font-family: 'Pelrome', sans-serif;
+   letter-spacing: 15px;
+   font-size: 1.4rem;
+
+
 }
+
+@font-face {
+    font-family: 'Pelrome';
+    src: url('font/Palmore\ Regular.ttf'); /* Adjust the path to your font file */
+  }
+
 /* Parallax container */
 .parallax-container {
     position: relative;
@@ -132,6 +141,7 @@ body, html {
     }
 }
 
+/* General styling for card-stack */
 .card-stack {
     position: relative;
     width: 100%; /* Full width */
@@ -139,15 +149,17 @@ body, html {
     display: flex;
     justify-content: center; /* Center the cards horizontally */
     align-items: flex-start; /* Align cards at the top */
-    margin-top: 300px; /* Place the card stack below the red box */
-    padding: 0 0 100px 0; /* Add 100px padding at the bottom */
-    
+    margin-top: 200px; /* Space below red section */
+    padding: 0 0 400px 0; /* Adjust bottom padding for extra space */
   }
   
+  /* Base styling for cards */
   .card {
     position: absolute; /* Ensure cards overlap */
-    width: 900px; /* Adjust card width */
-    height: 400px; /* Adjust card height */
+    width: 90%; /* Responsive width (default for larger screens) */
+    max-width: 900px; /* Cap the width for larger screens */
+    height: auto; /* Maintain aspect ratio dynamically */
+    aspect-ratio: 9 / 4; /* Maintain 900x400 ratio */
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover animation */
@@ -155,42 +167,107 @@ body, html {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Consistent shadow */
   }
   
-  /* Stacking logic with overlap on the top */
-  .card:nth-child(1) {
-    transform: translateY(0px) scale(1); /* Top card */
-    z-index: 6; /* Highest */
-  }
-  .card:nth-child(2) {
-    transform: translateY(-50px) scale(0.96); /* Slightly above the previous card */
-    z-index: 5;
-  }
-  .card:nth-child(3) {
-    transform: translateY(-100px) scale(0.92); /* Further above */
-    z-index: 4;
-  }
-  .card:nth-child(4) {
-    transform: translateY(-150px) scale(0.88); /* Continue stacking upward */
-    z-index: 3;
-  }
-  .card:nth-child(5) {
-    transform: translateY(-200px) scale(0.84); /* Topmost card in stack */
-    z-index: 2;
-  }
-  .card:nth-child(6) {
-    transform: translateY(-250px) scale(0.8); /* Topmost card */
-    z-index: 1; /* Lowest */
-  }
-  
-  /* Hover effect for all cards */
-  .card:hover {
-    transform: translateY(-260px) scale(1.05); /* Slight zoom and lift */
-    z-index: 7; /* Bring hovered card to the front */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow for hover */
-  }
-  
   .card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Maintain image coverage */
+  }
+  
+  /* Stacking logic */
+  .card:nth-child(1) {
+    transform: translateY(0px) scale(1);
+    z-index: 6;
+  }
+  .card:nth-child(2) {
+    transform: translateY(-40px) scale(0.96);
+    z-index: 5;
+  }
+  .card:nth-child(3) {
+    transform: translateY(-80px) scale(0.92);
+    z-index: 4;
+  }
+  .card:nth-child(4) {
+    transform: translateY(-120px) scale(0.88);
+    z-index: 3;
+  }
+  .card:nth-child(5) {
+    transform: translateY(-160px) scale(0.84);
+    z-index: 2;
+  }
+  .card:nth-child(6) {
+    transform: translateY(-200px) scale(0.8);
+    z-index: 1;
+  }
+  
+  /* Hover effect */
+  .card:hover {
+    transform: translateY(-220px) scale(1.03);
+    z-index: 7; /* Bring hovered card to the front */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Responsive Styling */
+  
+  /* Medium devices (tablets) */
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 90%; /* Adjust width for smaller screens */
+      max-width: 700px; /* Cap width for tablets */
+      aspect-ratio: 9 / 4; /* Maintain aspect ratio */
+      height: auto; /* Ensure responsive scaling */
+    }
+  
+    /* Adjust stacking */
+    .card:nth-child(2) {
+      transform: translateY(-30px) scale(0.96);
+    }
+    .card:nth-child(3) {
+      transform: translateY(-60px) scale(0.92);
+    }
+    .card:nth-child(4) {
+      transform: translateY(-90px) scale(0.88);
+    }
+    .card:nth-child(5) {
+      transform: translateY(-120px) scale(0.84);
+    }
+    .card:nth-child(6) {
+      transform: translateY(-150px) scale(0.8);
+    }
+  
+    .card:hover {
+      transform: translateY(-170px) scale(1.02);
+    }
+  }
+  
+  /* Small devices (phones) */
+  @media screen and (max-width: 480px) {
+    .card {
+      width: 95%; /* Fit smaller screens */
+      max-width: 350px; /* Cap maximum width */
+      aspect-ratio: 9 / 4; /* Maintain aspect ratio */
+      height: auto; /* Dynamic height */
+    }
+  
+    /* Adjust stacking */
+    .card:nth-child(2) {
+      transform: translateY(-20px) scale(0.96);
+    }
+    .card:nth-child(3) {
+      transform: translateY(-40px) scale(0.92);
+    }
+    .card:nth-child(4) {
+      transform: translateY(-60px) scale(0.88);
+    }
+    .card:nth-child(5) {
+      transform: translateY(-80px) scale(0.84);
+    }
+    .card:nth-child(6) {
+      transform: translateY(-100px) scale(0.8);
+    }
+  
+    .card:hover {
+      transform: translateY(-110px) scale(1.01);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Subtle hover shadow */
+    }
   }
   
