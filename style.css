@@ -133,4 +133,64 @@ body, html {
 }
 
 .card-stack {
-   
+    position: relative;
+    width: 100%; /* Full width */
+    height: auto; /* Dynamic height */
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: flex-start; /* Align cards at the top */
+    margin-top: 300px; /* Place the card stack below the red box */
+    padding: 0 0 100px 0; /* Add 100px padding at the bottom */
+    
+  }
+  
+  .card {
+    position: absolute; /* Ensure cards overlap */
+    width: 900px; /* Adjust card width */
+    height: 400px; /* Adjust card height */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover animation */
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Consistent shadow */
+  }
+  
+  /* Stacking logic with overlap on the top */
+  .card:nth-child(1) {
+    transform: translateY(0px) scale(1); /* Top card */
+    z-index: 6; /* Highest */
+  }
+  .card:nth-child(2) {
+    transform: translateY(-50px) scale(0.96); /* Slightly above the previous card */
+    z-index: 5;
+  }
+  .card:nth-child(3) {
+    transform: translateY(-100px) scale(0.92); /* Further above */
+    z-index: 4;
+  }
+  .card:nth-child(4) {
+    transform: translateY(-150px) scale(0.88); /* Continue stacking upward */
+    z-index: 3;
+  }
+  .card:nth-child(5) {
+    transform: translateY(-200px) scale(0.84); /* Topmost card in stack */
+    z-index: 2;
+  }
+  .card:nth-child(6) {
+    transform: translateY(-250px) scale(0.8); /* Topmost card */
+    z-index: 1; /* Lowest */
+  }
+  
+  /* Hover effect for all cards */
+  .card:hover {
+    transform: translateY(-260px) scale(1.05); /* Slight zoom and lift */
+    z-index: 7; /* Bring hovered card to the front */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow for hover */
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
