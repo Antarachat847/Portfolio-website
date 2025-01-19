@@ -1,5 +1,71 @@
-.card a {
+body {
+    background-color: rgba(254, 252, 231, 0.991); /* Light background */
+    color: rgb(88, 4, 119);
+    text-align: center; /* Center align text */
+    font-family: 'IM Fell English', serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-top: 50px; /* Spacing above the header */
+}
+
+main {
+    margin-top: 50px; /* Ensure space between card and main content */
+}
+
+footer {
+    margin-top: 50px; /* Add space before footer */
+}
+
+a {
+    color: rgb(106, 0, 144);
     text-decoration: none;
-    color: inherit;
-    display: block; /* Ensure the link covers the whole card */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+img {
+    margin-top: 20px;
+    max-width: 70%; /* Reduce the image width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    border: 3px solid rgb(106, 0, 144); /* Thinner border for a refined look */
+    border-radius: 5px; /* Subtle rounding for edges */
+    display: block; /* Center the image */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    img {
+        max-width: 50%; /* Image is larger for medium-sized screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    img {
+        max-width: 40%; /* Image is even smaller for wider screens */
+    }
+}
+
+.gallery {
+    display: flex; /* Use flexbox for a row layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line for smaller screens */
+    gap: 20px; /* Add space between images */
+    justify-content: center; /* Center the images in the gallery */
+    margin: 30px auto; /* Center the gallery with spacing */
+}
+
+.gallery img {
+    width: auto; /* Keep the original width of the images */
+    height: auto; /* Maintain the original aspect ratio */
+    border: 3px solid rgb(106, 0, 144); /* Optional border for styling */
+    border-radius: 5px; /* Subtle rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
 }
