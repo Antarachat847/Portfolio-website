@@ -39,22 +39,10 @@ img {
     margin-bottom: 50px;
 }
 
-/* Specific styling for the bottom image to make it full-width */
-.full-width-image {
-    width: 100vw; /* Expand the image to the full width of the viewport */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0; /* Remove any margin */
-    padding: 0; /* Remove padding if any */
-    display: block; /* Ensure the image is a block-level element */
-}
-
 /* Responsive Design */
 @media (min-width: 768px) {
     img {
         max-width: 50%; /* Image is larger for medium-sized screens */
-    }
-    .full-width-image {
-        max-width: 100%; /* Full width remains intact */
     }
 }
 
@@ -62,21 +50,39 @@ img {
     img {
         max-width: 40%; /* Image is even smaller for wider screens */
     }
-    .full-width-image {
-        max-width: 100%; /* Full width remains intact */
-    }
 }
 
 .gallery {
-    display: flex; /* Use flexbox for a row layout */
-    flex-wrap: wrap; /* Allow wrapping to the next line for smaller screens */
-    gap: 20px; /* Add space between images */
-    justify-content: center; /* Center the images in the gallery */
-    margin: 30px auto; /* Center the gallery with spacing */
+    display: block; /* Ensure it's a block container */
+    margin: 0; /* Remove margins */
+    padding: 0; /* Remove padding */
+    width: 3600px; /* Default for your screen size */
 }
 
 .gallery img {
-    width: auto; /* Keep the original width of the images */
-    height: auto; /* Maintain the original aspect ratio */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    width: 3600px; /* Default for your screen size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0; /* Remove margins around the image */
+    display: block; /* Ensure no inline space issues */
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 1440px) {
+    .gallery {
+        width: 100vw; /* Scale down to viewport width */
+    }
+    .gallery img {
+        width: 100vw; /* Match the container width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        width: 100vw; /* Keep full-width for mobile */
+    }
+    .gallery img {
+        width: 100vw; /* Full width on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
 }
