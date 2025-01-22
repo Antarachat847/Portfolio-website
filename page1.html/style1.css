@@ -150,24 +150,21 @@ img {
 }
 
 .gallery {
-    position: relative; /* Ensure proper positioning */
-    width: 100vw; /* Full width of the viewport */
-    height: 100vh; /* Full height of the viewport */
-    overflow: hidden; /* Prevent scrolling if the image overflows */
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center images horizontally */
     margin: 0; /* Remove default margins */
     padding: 0; /* Remove default padding */
 }
 
 .gallery img {
-    position: absolute; /* Position the image within the container */
-    top: 0; /* Align the top of the image with the container */
-    left: 0; /* Align the left of the image with the container */
-    width: 100%; /* Cover the full width of the container */
-    height: auto; /* Cover the full height of the container */
-    object-fit: cover; /* Maintain the aspect ratio while covering the container */
+    width: 100vw; /* Full width of the viewport */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure images are block-level elements */
+    object-fit: cover; /* Ensure images fill the width without distortion */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
 }
-
-
 
 @media (max-width: 768px) {
 
@@ -286,7 +283,7 @@ img {
     
     }
     .next-projects {
-        margin-top: 20vh;
+        margin-top: 10vh;
         display: flex;
         justify-content: space-between;
         /* gap: 20px; Space between the projects */
