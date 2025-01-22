@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card 1 Details</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a class="about">About</a></li>
+          <li><a class="connect" >Connect</a></li>
+        </ul>
+      </nav>
+      <div class="connectlink">
+        <ul class="list">
+          <p>If you enjoyed looking at my work and have any constructive feedback or critique or if you wish to coloaborate or just wanna say hi, I am more than happy to connect. You can find me:<br><br>
+          
+          <a href="mailto:shahk153@newschool.com">@email</a><br>
+          <a href="https://www.instagram.com/krishna_shah16o7/">@instagram</a><br>
+          <a href="https://www.linkedin.com/in/krishna-shah-43471a243">@linkedin</a></p>
+        </ul>
+      </div>
+
+      <div class="aboutlink">
+        <ul class="list">
+          <p>If you enjoyed looking at my work and have any constructive feedback or critique or if you wish to coloaborate or just wanna say hi, I am more than happy to connect. You can find me:<br><br>
+          
+          <a href="mailto:shahk153@newschool.com">@email</a><br>
+          <a href="https://www.instagram.com/krishna_shah16o7/">@instagram</a><br>
+          <a href="https://www.linkedin.com/in/krishna-shah-43471a243">@linkedin</a></p>
+        </ul>
+      </div>
+
+
+    <main>
+        <img src="image4/MENU.png" alt="Card 1 Image">
+        <p>
+            I had the privilege of collaborating with Cadbury on their Diwali packaging for their e-commerce platform, <br> a creatively fulfilling and inspiring experience. The project celebrated togetherness, <br> a cornerstone of Diwali, through a unique card game designed to foster family connections <br> as well as custom box packaging which included a picture frame, goodie bag filled with choclates as well as a <br>personalised message making this the perfect gift to celebrate this festival of lights and unity. <br><br>
+</p>
+<div class="gallery">
+    <img src="image4/Untitled design (1).png"Image 1">
+    <img src="image4/2 copy 3.jpg"Image 2">
+    <img src="image4/1 copy 3.jpg"Image 2">
+
+
+</div>
+
+    </main>
+   
+    <script>
+        const connect = document.querySelector('.connect');
+const connectlink = document.querySelector('.connectlink');
+
+// Toggle the visibility of the connectlink div on click
+connect.addEventListener('click', (event) => {
+  event.preventDefault();
+  connectlink.classList.toggle('active');
+});
+
+// Close the connectlink if the user clicks outside it
+document.addEventListener('click', (event) => {
+  if (!connectlink.contains(event.target) && !connect.contains(event.target)) {
+    connectlink.classList.remove('active');
+  }
+});
+
+const about = document.querySelector('.about');
+const aboutlink = document.querySelector('.aboutlink');
+
+// Toggle the visibility of the connectlink div on click
+about.addEventListener('click', (event) => {
+  event.preventDefault();
+  aboutlink.classList.toggle('active');
+});
+
+// Close the connectlink if the user clicks outside it
+document.addEventListener('click', (event) => {
+  if (!aboutlink.contains(event.target) && !about.contains(event.target)) {
+    aboutlink.classList.remove('active');
+  }
+});
+
+    </script>
+ <footer class="next-projects">
+    <div class="project">
+        <a href="page3.html"><img src="image4/book.png" alt="Project 3 Preview" class="project-image">
+         <p class="project-link">Menu</p></a>
+    </div>
+    <div class="project">
+        <a href="page3.html"><img src="image4/PVR.png" alt="Project 3 Preview" class="project-image">
+         <p class="project-link">Book</p></a>
+    </div>
+    <div class="project">
+        <a href="page3.html"><img src="image4/WEB DESIGN.png" alt="Project 3 Preview" class="project-image">
+         <p class="project-link">PVR</p></a>
+    </div>
+</footer>
+
+<footer>
+    <a href="https://antarachat847.github.io/Portfolio-website/">Back to Main Page</a>
+</footer>
+
+</body>
+</html>
