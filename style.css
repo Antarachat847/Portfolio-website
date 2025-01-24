@@ -1,269 +1,269 @@
 /* General body and HTML styling */
 body, html {
-    margin: 0;
-    padding: 0;
-    height: auto; /* Allow content to define the height */
-    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: auto; /* Allow content to define the height */
+  overflow-x: hidden;
 }
 
 nav {
-    font-family: Helvetica, sans-serif;
-    display: flex;
-    justify-content: center; /* Center the navigation */
-    margin-top: 0rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
-  height:8vh;
-  background-color: transparent;
-  z-index: 100;
- 
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none; 
-    justify-content: space-between;
-    width: 100%; /* Control spacing between elements */
-  }
-  
-  nav li {
-    margin: 0 1rem; /* Add horizontal spacing */
-  }
-  
-  nav a {
-    font-size: 1.3rem;
-    font-weight:bold;
-    color: red;
-    text-decoration: none; /* Remove underline */
-    /* text-transform: uppercase; */
-  }
+  font-family: 'IM Fell English', serif;
+  display: flex;
+  justify-content: center; /* Center the navigation */
+  margin-top: 0rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+height:8vh;
+background-color: transparent;
+z-index: 100;
+
+}
+
+nav ul {
+  display: flex;
+  list-style: none; 
+  justify-content: space-between;
+  width: 100%; /* Control spacing between elements */
+}
+
+nav li {
+  margin: 0 1rem; /* Add horizontal spacing */
+}
+
+nav a {
+  font-size: 1.3rem;
+  font-weight:bold;
+  color: red;
+  text-decoration: none; /* Remove underline */
+  /* text-transform: uppercase; */
+}
 
 
-  .connectlink{
-    position: fixed;
-    width:25vw;
-    right:-100%;
-    height:94vh;
-    top:6vh;
-    background-color: white;
-    color:red;
-    z-index:1500;
-    transition:right 1s ease;
-    overflow-y: auto;
-  }
+.connectlink{
+  position: fixed;
+  width:25vw;
+  right:-100%;
+  height:94vh;
+  top:6vh;
+  background-color: white;
+  color:red;
+  z-index:1500;
+  transition:right 1s ease;
+  overflow-y: auto;
+}
+
+.connectlink p{
+  padding-top: 6vh;
+  padding:50px;
+  font-size: 1.3rem;
+  font-weight:bold;
+  color: red;
+  text-decoration: none; /* Remove underline */
   
-  .connectlink p{
-    padding-top: 6vh;
-    padding:50px;
-    font-size: 1.3rem;
-    font-weight:bold;
-    color: red;
-    text-decoration: none; /* Remove underline */
-    
-  }
-  
-  .connectlink p a{
-  
-    color: red;
-    text-decoration: none; /* Remove underline */
-  }
-  
-  
-  .connectlink.active{
-    right:0;
-  }
-  .connectlink p a:hover{
-    text-decoration: underline; /* Remove underline */
-  }
+}
+
+.connectlink p a{
+
+  color: red;
+  text-decoration: none; /* Remove underline */
+}
 
 
-  .aboutlink{
-    position: fixed;
-    width:25vw;
-    left:-100%;
-    height:94vh;
-    top:6vh;
-    background-color: white;
-    color:red;
-    z-index:1500;
-    transition:left 1s ease;
-    overflow-y: auto;
-  }
+.connectlink.active{
+  right:0;
+}
+.connectlink p a:hover{
+  text-decoration: underline; /* Remove underline */
+}
+
+
+.aboutlink{
+  position: fixed;
+  width:25vw;
+  left:-100%;
+  height:94vh;
+  top:6vh;
+  background-color: white;
+  color:red;
+  z-index:1500;
+  transition:left 1s ease;
+  overflow-y: auto;
+}
+
+.aboutlink p{
+  padding-top: 6vh;
+  padding:50px;
+  font-size: 1.3rem;
+  font-weight:bold;
+  color: red;
+  text-decoration: none; /* Remove underline */
   
-  .aboutlink p{
-    padding-top: 6vh;
-    padding:50px;
-    font-size: 1.3rem;
-    font-weight:bold;
-    color: red;
-    text-decoration: none; /* Remove underline */
-    
-  }
-  
-  .aboutlink p a{
-  
-    color: red;
-    text-decoration: none; /* Remove underline */
-  }
-  
-  
-  .aboutlink.active{
-    left:0;
-  }
-  .aboutlink p a:hover{
-    text-decoration: underline; /* Remove underline */
-  }
+}
+
+.aboutlink p a{
+
+  color: red;
+  text-decoration: none; /* Remove underline */
+}
+
+
+.aboutlink.active{
+  left:0;
+}
+.aboutlink p a:hover{
+  text-decoration: underline; /* Remove underline */
+}
 
 /* Hero Section */
 .hero-section {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
 }
 
 .hero-text {
-    position: fixed;
-    top: 0%;
-    width: 100%;
-    text-align: center;
-    color: red;
-    font-family: 'IM Fell English';
-    letter-spacing: 12px;
-    font-size: 1.1rem;
-    padding-left: 35px;
-    z-index: -2;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+  color: red;
+  font-family: 'IM Fell English';
+  letter-spacing: 12px;
+  font-size: 1.1rem;
+  padding-left: 35px;
+  z-index: -2;
 }
 
 /* Video container */
 .video-container {
-    position: fixed; /* Keep the video fixed for the parallax effect */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -3; /* Ensure it stays in the background */
-    overflow: hidden;
-    background: url('video/video-output-2F9752DC-B88E-489D-A5EA-713CF0B054FD.MOV') repeat center center / cover;
+  position: fixed; /* Keep the video fixed for the parallax effect */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -3; /* Ensure it stays in the background */
+  overflow: hidden;
+  background: url('video/video-output-2F9752DC-B88E-489D-A5EA-713CF0B054FD.MOV') repeat center center / cover;
 }
 
 /* Background video styling */
 .background-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    -webkit-object-fit: cover; /* For Safari */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-object-fit: cover; /* For Safari */
 }
 
 /* Red Section */
 .red-section {
-    position: relative;
-    background-color: red;
-   height: 75vh; /* Adjust height to fit content */
-    color: white;
-    text-align: center;
-    padding: 10vw 5vw;
-    font-family: 'IM Fell English', serif;
-    padding-top: 130px;
-    padding-bottom: 130px;
-    margin-bottom: 0; /* Remove any bottom margin */
-    overflow: hidden;
+  position: relative;
+  background-color: red;
+ height: 75vh; /* Adjust height to fit content */
+  color: white;
+  text-align: center;
+  padding: 10vw 5vw;
+  font-family: 'IM Fell English', serif;
+  padding-top: 130px;
+  padding-bottom: 130px;
+  margin-bottom: 0; /* Remove any bottom margin */
+  overflow: hidden;
 }
 
 .red-section-content {
-    font-size: 1.5rem;
-    /* line-height: 2.2rem; */
+  font-size: 1.5rem;
+  /* line-height: 2.2rem; */
 }
 
 /* Clip Positioning */
 .clip {
-    
-    position: absolute;
-    bottom: -13vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%; 
-    height: auto;
-    z-index: 10;
+  
+  position: absolute;
+  bottom: -13vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; 
+  height: auto;
+  z-index: 10;
 }
 
 /* Card Stack Styling */
 .card-stack {
-    padding-top: 5vh;
-    position: relative;
-    width: 100%; /* Full width */
-    height: auto; /* Dynamic height */
-    display: flex;
-    justify-content: center; /* Center the cards horizontally */
-    align-items: flex-start; /* Align cards at the top */
-    margin-top: 20vh;
-    padding: 100px 0 0 0;
+  padding-top: 5vh;
+  position: relative;
+  width: 100%; /* Full width */
+  height: auto; /* Dynamic height */
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  align-items: flex-start; /* Align cards at the top */
+  margin-top: 20vh;
+  padding: 100px 0 0 0;
 }
 
 /* Base styling for cards */
 .card {
-    position: absolute; /* Ensure cards overlap */
-    width: 90%; /* Responsive width (default for larger screens) */
-    max-width: 75vw; /* Cap the width for larger screens */
-    height: auto; /* Maintain aspect ratio dynamically */
-    aspect-ratio: 9 / 4; /* Maintain 900x400 ratio */
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover animation */
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Consistent shadow */
+  position: absolute; /* Ensure cards overlap */
+  width: 90%; /* Responsive width (default for larger screens) */
+  max-width: 75vw; /* Cap the width for larger screens */
+  height: auto; /* Maintain aspect ratio dynamically */
+  aspect-ratio: 9 / 4; /* Maintain 900x400 ratio */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover animation */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Consistent shadow */
 }
 
 .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Maintain image coverage */
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain image coverage */
+  overflow: hidden;
 }
 
 /* Portfolio card behavior */
 .card:nth-child(1) {
-    position: sticky; /* Keeps the card "stuck" in its position */
-    top: 0; /* Adjust to make it the first card of the stack */
-    z-index: 7; /* Keep it above the rest of the stack */
-    transform: translateY(0) scale(1); /* Ensure it stays aligned with the stack */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Consistent shadow */
-    pointer-events: none; /* Disable all hover effects */
-    cursor: default; /* Change cursor to default to show it's non-interactive */
-    transition: none; /* Remove hover transitions */
+  position: sticky; /* Keeps the card "stuck" in its position */
+  top: 0; /* Adjust to make it the first card of the stack */
+  z-index: 7; /* Keep it above the rest of the stack */
+  transform: translateY(0) scale(1); /* Ensure it stays aligned with the stack */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Consistent shadow */
+  pointer-events: none; /* Disable all hover effects */
+  cursor: default; /* Change cursor to default to show it's non-interactive */
+  transition: none; /* Remove hover transitions */
 }
 
 /* Stacking logic for other cards */
 .card:nth-child(2) {
-    transform: translateY(-5vh) scale(0.96);
-    z-index: 6;
+  transform: translateY(-5vh) scale(0.96);
+  z-index: 6;
 }
 .card:nth-child(3) {
-    transform: translateY(-10vh) scale(0.92);
-    z-index: 5;
+  transform: translateY(-10vh) scale(0.92);
+  z-index: 5;
 }
 .card:nth-child(4) {
-    transform: translateY(-15vh) scale(0.88);
-    z-index: 4;
+  transform: translateY(-15vh) scale(0.88);
+  z-index: 4;
 }
 .card:nth-child(5) {
-    transform: translateY(-20vh) scale(0.84);
-    z-index: 3;
+  transform: translateY(-20vh) scale(0.84);
+  z-index: 3;
 }
 .card:nth-child(6) {
-    transform: translateY(-25vh) scale(0.8);
-    z-index: 2;
+  transform: translateY(-25vh) scale(0.8);
+  z-index: 2;
 }
 .card:nth-child(7) {
-    transform: translateY(-30vh) scale(0.76);
-    z-index: 1;
+  transform: translateY(-30vh) scale(0.76);
+  z-index: 1;
 }
 
 /* Hover effect for other cards */
 .card:hover {
-    transform: translateY(-260px) scale(1.03);
-    z-index: 8; /* Bring hovered card to the front */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-260px) scale(1.03);
+  z-index: 8; /* Bring hovered card to the front */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsive Styling */
@@ -271,241 +271,241 @@ nav {
 /* Medium devices (tablets) */
 @media screen and (max-width: 768px) {
 
-    .connectlink{
-        position: fixed;
-        width:55vw;
-        right:-100%;
-        height:94vh;
-        top:6vh;
-        background-color: white;
-        color:red;
-        z-index:1500;
-        transition:right 1s ease;
-        overflow-y: auto;
-      }
+  .connectlink{
+      position: fixed;
+      width:55vw;
+      right:-100%;
+      height:94vh;
+      top:6vh;
+      background-color: white;
+      color:red;
+      z-index:1500;
+      transition:right 1s ease;
+      overflow-y: auto;
+    }
+    
+    .connectlink p{
+      padding-top: 6vh;
+      padding:5vw;
+      font-size: 1.2rem;
+      font-weight:bold;
+      color: red;
+      text-decoration: none; /* Remove underline */
       
-      .connectlink p{
-        padding-top: 6vh;
-        padding:5vw;
-        font-size: 1.2rem;
-        font-weight:bold;
-        color: red;
-        text-decoration: none; /* Remove underline */
-        
-      }
+    }
 
-      .aboutlink{
-        position: fixed;
-        width:55vw;
-        left:-100%;
-        height:94vh;
-        top:6vh;
-        background-color: white;
-        color:red;
-        z-index:1500;
-        transition:left 1s ease;
-        overflow-y: auto;
-      }
+    .aboutlink{
+      position: fixed;
+      width:55vw;
+      left:-100%;
+      height:94vh;
+      top:6vh;
+      background-color: white;
+      color:red;
+      z-index:1500;
+      transition:left 1s ease;
+      overflow-y: auto;
+    }
+    
+    .aboutlink p{
+      padding-top: 6vh;
+      padding:5vw;
+      font-size: 1.2rem;
+      font-weight:bold;
+      color: red;
+      text-decoration: none; /* Remove underline */
       
-      .aboutlink p{
-        padding-top: 6vh;
-        padding:5vw;
-        font-size: 1.2rem;
-        font-weight:bold;
-        color: red;
-        text-decoration: none; /* Remove underline */
-        
-      }
-
-      .hero-text {
-        position: fixed;
-        top: 7%;
-        width: 100%;
-        text-align: center;
-        color: red;
-        font-family: 'IM Fell English';
-        letter-spacing: 10px;
-        font-size: 0.8rem;
-        padding-left: 35px;
-        z-index: -2;
     }
 
-    .card {
-        width: 90%;
-        max-width: 700px;
-        aspect-ratio: 9 / 4;
-        height: auto;
-    }
+    .hero-text {
+      position: fixed;
+      top: 7%;
+      width: 100%;
+      text-align: center;
+      color: red;
+      font-family: 'IM Fell English';
+      letter-spacing: 10px;
+      font-size: 0.8rem;
+      padding-left: 35px;
+      z-index: -2;
+  }
 
-    /* Adjust stacking */
-    .card:nth-child(2) {
-        transform: translateY(-30px) scale(0.96);
-    }
-    .card:nth-child(3) {
-        transform: translateY(-60px) scale(0.92);
-    }
-    .card:nth-child(4) {
-        transform: translateY(-90px) scale(0.88);
-    }
-    .card:nth-child(5) {
-        transform: translateY(-120px) scale(0.84);
-    }
-    .card:nth-child(6) {
-        transform: translateY(-150px) scale(0.8);
-    }
-    .card:nth-child(7) {
-        transform: translateY(-180px) scale(0.76);
-    }
+  .card {
+      width: 90%;
+      max-width: 700px;
+      aspect-ratio: 9 / 4;
+      height: auto;
+  }
 
-    .card:hover {
-        transform: translateY(-200px) scale(1.02);
-    }
+  /* Adjust stacking */
+  .card:nth-child(2) {
+      transform: translateY(-30px) scale(0.96);
+  }
+  .card:nth-child(3) {
+      transform: translateY(-60px) scale(0.92);
+  }
+  .card:nth-child(4) {
+      transform: translateY(-90px) scale(0.88);
+  }
+  .card:nth-child(5) {
+      transform: translateY(-120px) scale(0.84);
+  }
+  .card:nth-child(6) {
+      transform: translateY(-150px) scale(0.8);
+  }
+  .card:nth-child(7) {
+      transform: translateY(-180px) scale(0.76);
+  }
+
+  .card:hover {
+      transform: translateY(-200px) scale(1.02);
+  }
 }
 
 /* Small devices (phones) */
 @media screen and (max-width: 480px) {
 
-    .connectlink{
-        position: fixed;
-        width:100vw;
-        right:-100%;
-        height:94vh;
-        top:6vh;
-        background-color: white;
-        color:red;
-        z-index:1500;
-        transition:right 1s ease;
-        overflow-y: auto;
-      }
-      
-      .connectlink p{
-        padding-top: 6vh;
-        padding:10vw;
-        font-size: 1.2rem;
-        font-weight:bold;
-        color: red;
-        text-decoration: none; /* Remove underline */
-        
-      }
-    
-      .aboutlink{
-        position: fixed;
-        width:100vw;
-        left:-100%;
-        height:94vh;
-        top:6vh;
-        background-color: white;
-        color:red;
-        z-index:1500;
-        transition:left 1s ease;
-        overflow-y: auto;
-      }
-      
-      .connectlink p{
-        padding-top: 6vh;
-        padding:10vw;
-        font-size: 1.2rem;
-        font-weight:bold;
-        color: red;
-        text-decoration: none; /* Remove underline */
-        
-      }
-    
-      .hero-text {
-        position: fixed;
-        top: 7%;
-        width: 100%;
-        text-align: center;
-        color: red;
-        font-family: 'IM Fell English';
-        letter-spacing: 10px;
-        font-size: 0.8rem;
-        padding-left: 35px;
-        z-index: -2;
+  .connectlink{
+      position: fixed;
+      width:100vw;
+      right:-100%;
+      height:94vh;
+      top:6vh;
+      background-color: white;
+      color:red;
+      z-index:1500;
+      transition:right 1s ease;
+      overflow-y: auto;
     }
-
-      nav {
-        cursor:default;
-      
-      font-family: Helvetica, sans-serif;
-      
-      display: flex;
-      
-      justify-content: center; /* Center the navigation */
-      
-      margin: 1rem;
-      
-      
-      height:4vh;
-      
-      }
-      
-      
-      nav ul {
-      
-      display: flex;
-      
-      list-style: none;
-      
-      justify-content: space-between;
-      
-      width: 100%; /* Control spacing between elements */
-      
-      }
-      
-      
-      nav li {
-      
-      margin: 0 1rem; /* Add horizontal spacing */
-      cursor:default;
-      
-      }
-      
-      
-      nav a {
-      
+    
+    .connectlink p{
+      padding-top: 6vh;
+      padding:10vw;
       font-size: 1.2rem;
-      
       font-weight:bold;
-      
       color: red;
-      
       text-decoration: none; /* Remove underline */
       
-      cursor:default;
-      /* text-transform: uppercase; */
+    }
+  
+    .aboutlink{
+      position: fixed;
+      width:100vw;
+      left:-100%;
+      height:94vh;
+      top:6vh;
+      background-color: white;
+      color:red;
+      z-index:1500;
+      transition:left 1s ease;
+      overflow-y: auto;
+    }
+    
+    .connectlink p{
+      padding-top: 6vh;
+      padding:10vw;
+      font-size: 1.2rem;
+      font-weight:bold;
+      color: red;
+      text-decoration: none; /* Remove underline */
       
-      }
+    }
+  
+    .hero-text {
+      position: fixed;
+      top: 7%;
+      width: 100%;
+      text-align: center;
+      color: red;
+      font-family: 'IM Fell English';
+      letter-spacing: 10px;
+      font-size: 0.8rem;
+      padding-left: 35px;
+      z-index: -2;
+  }
 
-    .card {
-        width: 95%;
-        max-width: 350px;
-        aspect-ratio: 9 / 4;
-        height: auto;
+    nav {
+      cursor:default;
+    
+    font-family: Helvetica, sans-serif;
+    
+    display: flex;
+    
+    justify-content: center; /* Center the navigation */
+    
+    margin: 1rem;
+    
+    
+    height:4vh;
+    
+    }
+    
+    
+    nav ul {
+    
+    display: flex;
+    
+    list-style: none;
+    
+    justify-content: space-between;
+    
+    width: 100%; /* Control spacing between elements */
+    
+    }
+    
+    
+    nav li {
+    
+    margin: 0 1rem; /* Add horizontal spacing */
+    cursor:default;
+    
+    }
+    
+    
+    nav a {
+    
+    font-size: 1.2rem;
+    
+    font-weight:bold;
+    
+    color: red;
+    
+    text-decoration: none; /* Remove underline */
+    
+    cursor:default;
+    /* text-transform: uppercase; */
+    
     }
 
-    /* Adjust stacking */
-    .card:nth-child(2) {
-        transform: translateY(-10vh) scale(0.96);
-    }
-    .card:nth-child(3) {
-        transform: translateY(-20vh) scale(0.92);
-    }
-    .card:nth-child(4) {
-        transform: translateY(-30vh) scale(0.88);
-    }
-    .card:nth-child(5) {
-        transform: translateY(-40vh) scale(0.84);
-    }
-    .card:nth-child(6) {
-        transform: translateY(-50vh) scale(0.8);
-    }
-    .card:nth-child(7) {
-        transform: translateY(-60vh) scale(0.76);
-    }
+  .card {
+      width: 95%;
+      max-width: 350px;
+      aspect-ratio: 9 / 4;
+      height: auto;
+  }
 
-    .card:hover {
-        transform: translateY(-140px) scale(1.01);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    }
+  /* Adjust stacking */
+  .card:nth-child(2) {
+      transform: translateY(-10vh) scale(0.96);
+  }
+  .card:nth-child(3) {
+      transform: translateY(-20vh) scale(0.92);
+  }
+  .card:nth-child(4) {
+      transform: translateY(-30vh) scale(0.88);
+  }
+  .card:nth-child(5) {
+      transform: translateY(-40vh) scale(0.84);
+  }
+  .card:nth-child(6) {
+      transform: translateY(-50vh) scale(0.8);
+  }
+  .card:nth-child(7) {
+      transform: translateY(-60vh) scale(0.76);
+  }
+
+  .card:hover {
+      transform: translateY(-140px) scale(1.01);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
 }
