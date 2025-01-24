@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card 1 Details</title>
+    <link rel="stylesheet" href="style7.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a class="about">About</a></li>
+          <li><a class="connect" >Connect</a></li>
+        </ul>
+      </nav>
+      <div class="connectlink">
+        <ul class="list">
+          <p>If you enjoyed looking at my work and have any constructive feedback or critique or if you wish to coloaborate or just wanna say hi, I am more than happy to connect. You can find me:<br><br>
+          
+          <a href="mailto:chata416@newschool.edu">@email</a><br>
+          <a href="https://www.instagram.com/antara6420/?hl=en">@instagram</a><br>
+          <a href="hhttps://www.linkedin.com/in/antara-chatterjee-66b333286/">@linkedin</a></p>
+        </ul>
+      </div>
+
+      <div class="aboutlink">
+        <ul class="list">
+          <p>I’m a spirited Indian girl blending the vibrant colors of my roots with the dynamic energy of New York City. At Parsons School of Design, I draw inspiration from Indian textiles and contemporary design, weaving a story of cultural fusion and artistic expression. Here, I’m chasing dreams and painting my journey, one bold stroke at a time.<br><br>
+          
+        </ul>
+      </div>
+
+
+    <main>
+        <img src="image7/WEB DESIGN.png" alt="Card 1 Image">
+        <p>
+            I had the privilege of collaborating with Cadbury on their Diwali packaging for their e-commerce platform, <br> a creatively fulfilling and inspiring experience. The project celebrated togetherness, <br> a cornerstone of Diwali, through a unique card game designed to foster family connections <br> as well as custom box packaging which included a picture frame, goodie bag filled with choclates as well as a <br>personalised message making this the perfect gift to celebrate this festival of lights and unity. <br><br>
+</p>
+<div class="gallery">
+    <video src="image7/Kathakali copy 2.mp4" controls autoplay loop muted>
+        Your browser does not support the video tag.
+      </video>
+    <img src="image7/Sikkimov.GIF"Image 1">
+    <img src="image7/Redwala.gif"Image 1">
+    <video src="image7/video-output-941BDAEB-708D-491D-896F-8E4FF1E3792E.mp4" controls autoplay loop muted>
+      Your browser does not support the video tag.
+    </video>
+
+</div>
+
+    </main>
+   
+    <script>
+        const connect = document.querySelector('.connect');
+const connectlink = document.querySelector('.connectlink');
+
+// Toggle the visibility of the connectlink div on click
+connect.addEventListener('click', (event) => {
+  event.preventDefault();
+  connectlink.classList.toggle('active');
+});
+
+// Close the connectlink if the user clicks outside it
+document.addEventListener('click', (event) => {
+  if (!connectlink.contains(event.target) && !connect.contains(event.target)) {
+    connectlink.classList.remove('active');
+  }
+});
+
+const about = document.querySelector('.about');
+const aboutlink = document.querySelector('.aboutlink');
+
+// Toggle the visibility of the connectlink div on click
+about.addEventListener('click', (event) => {
+  event.preventDefault();
+  aboutlink.classList.toggle('active');
+});
+
+// Close the connectlink if the user clicks outside it
+document.addEventListener('click', (event) => {
+  if (!aboutlink.contains(event.target) && !about.contains(event.target)) {
+    aboutlink.classList.remove('active');
+  }
+});
+
+    </script>
+ <footer class="next-projects">
+    <div class="project">
+        <a href="http://127.0.0.1:5500/page6.html/"><img src="image7/Magazine.png" alt="Project 3 Preview" class="project-image">
+         <p class="project-link">Egyptian Hieroglyph Magazine</p></a>
+    </div>
+    <div class="project">
+        <a href="http://127.0.0.1:5500/page1.html/index.html"><img src="image7/CADBURY.png" alt="Project 3 Preview" class="project-image">
+         <p class="project-link">Cadbury Diwali packaging</p></a>
+    </div>
+    <div class="project">
+        <a href="http://127.0.0.1:5500/page4.html/"><img src="image7/MENU.png" alt="Project 3 Preview" class="project-image">
+         <p class="project-link">Sustainable MENU design</p></a>
+    </div>
+</footer>
+
+<footer>
+    <a href="https://antarachat847.github.io/Portfolio-website/">Back to Main Page</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+body {
+    background-color: rgba(252, 239, 210, 0.991);
+    color: rgb(14, 39, 16);
+    text-align: center; /* Center align text */
+    font-family: 'IM Fell English', serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-top: 50px; /* Spacing above the header */
+}
+
+nav {
+    font-family: 'IM Fell English', serif;
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    margin-top: 0rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  height:8vh;
+  background-color: transparent;
+  z-index: 100;
+ 
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none; 
+    justify-content: space-between;
+    width: 100%; /* Control spacing between elements */
+  }
+  
+  nav li {
+    margin: 0 1rem; /* Add horizontal spacing */
+  }
+  
+  nav a {
+    font-size: 1.3rem;
+    font-weight:bold;
+    color: rgb(0, 0, 0);
+    text-decoration: none; /* Remove underline */
+    /* text-transform: uppercase; */
+  }
+
+
+  .connectlink{
+    position: fixed;
+    width:25vw;
+    right:-100%;
+    height:94vh;
+    top:6vh;
+    background-color: rgba(252, 239, 210, 0.991);
+    color:rgb(0, 0, 0);
+    z-index:1500;
+    transition:right 1s ease;
+    overflow-y: auto;
+  }
+  
+  .connectlink p{
+    padding-top: 6vh;
+    padding:30px;
+    font-size: 1.3rem;
+    font-weight:bold;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    text-decoration: none; /* Remove underline */
+    
+  }
+  
+  .connectlink p a{
+  
+    color: rgb(0, 0, 0);
+    text-decoration: none; /* Remove underline */
+  }
+  
+  
+  .connectlink.active{
+    right:0;
+  }
+  .connectlink p a:hover{
+    text-decoration: underline; /* Remove underline */
+  }
+
+
+  .aboutlink{
+    position: fixed;
+    width:25vw;
+    left:-100%;
+    height:94vh;
+    top:6vh;
+    background-color: rgba(252, 239, 210, 0.991);
+    color:rgb(0, 0, 0);
+    z-index:1500;
+    transition:left 1s ease;
+    overflow-y: auto;
+  }
+  
+  .aboutlink p{
+    padding-top: 6vh;
+    padding:30px;
+    font-size: 1.3rem;
+    font-weight:bold;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    text-decoration: none; /* Remove underline */
+    
+  }
+  
+  .aboutlink p a{
+  
+    color: rgb(0, 0, 0);
+    text-decoration: none; /* Remove underline */
+  }
+  
+  
+  .aboutlink.active{
+    left:0;
+  }
+  .aboutlink p a:hover{
+    text-decoration: underline; /* Remove underline */
+  }
+
+main {
+    margin-top: 50px; /* Ensure space between card and main content */
+}
+
+footer {
+    margin-top: 50px; /* Add space before footer */
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+img {
+    margin-top: 20px;
+    max-width: 100%; 
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center the image */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center images horizontally */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
+
+.gallery img {
+    width: 100vw; /* Full width of the viewport */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure images are block-level elements */
+    object-fit: cover; /* Ensure images fill the width without distortion */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+video {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Avoid inline-block or inline issues */
+  }
+  
+@media (max-width: 768px) {
+
+    .connectlink{
+        position: fixed;
+        width:55vw;
+        right:-100%;
+        height:94vh;
+        top:6vh;
+        background-color: rgba(252, 239, 210, 0.991);
+        color:rgb(0, 0, 0);
+        z-index:1500;
+        transition:right 1s ease;
+        overflow-y: auto;
+      }
+      
+      .connectlink p{
+        padding-top: 6vh;
+        padding:5vw;
+        font-size: 1.2rem;
+        font-weight:bold;
+        color: rgb(0, 0, 0);
+        text-decoration: none; /* Remove underline */
+        
+      }
+
+      .aboutlink{
+        position: fixed;
+        width:55vw;
+        left:-100%;
+        height:94vh;
+        top:6vh;
+        background-color: rgba(252, 239, 210, 0.991);
+        color:rgb(0, 0, 0);
+        z-index:1500;
+        transition:left 1s ease;
+        overflow-y: auto;
+      }
+      
+      .aboutlink p{
+        padding-top: 6vh;
+        padding:5vw;
+        font-size: 1.2rem;
+        font-weight:bold;
+        color: rgb(0, 0, 0);
+        text-decoration: none; /* Remove underline */
+        
+      }
+
+    .gallery {
+        position: relative; /* Ensure proper positioning */
+        width: 100vw; /* Full width of the viewport */
+        height: 100vh; /* Full height of the viewport */
+        overflow: hidden; /* Prevent scrolling if the image overflows */
+        margin: 0; /* Remove default margins */
+        padding: 0; /* Remove default padding */
+    }
+    
+    .gallery img {
+        position: absolute; /* Position the image within the container */
+        top: 0; /* Align the top of the image with the container */
+        left: 0; /* Align the left of the image with the container */
+        width: 100%; /* Cover the full width of the container */
+        height: auto; /* Cover the full height of the container */
+        object-fit: cover; /* Maintain the aspect ratio while covering the container */
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .connectlink{
+        position: fixed;
+        width:100vw;
+        right:-100%;
+        height:94vh;
+        top:6vh;
+        background-color:rgba(252, 239, 210, 0.991);
+        color:rgb(0, 0, 0);
+        z-index:1500;
+        transition:right 1s ease;
+        overflow-y: auto;
+      }
+      
+      .connectlink p{
+        padding-top: 6vh;
+        padding:10vw;
+        font-size: 1.2rem;
+        font-weight:bold;
+        color: rgb(0, 0, 0);
+        text-decoration: none; /* Remove underline */
+        
+      }
+    
+      .aboutlink{
+        position: fixed;
+        width:100vw;
+        left:-100%;
+        height:94vh;
+        top:6vh;
+        background-color: rgba(252, 239, 210, 0.991);
+        color:rgb(0, 0, 0);
+        z-index:1500;
+        transition:left 1s ease;
+        overflow-y: auto;
+      }
+      
+      .connectlink p{
+        padding-top: 6vh;
+        padding:10vw;
+        font-size: 1.2rem;
+        font-weight:bold;
+        color: rgb(0, 0, 0);
+        text-decoration: none; /* Remove underline */
+        
+      }
+    
+    }
+    .next-projects {
+        margin-top: 10vh;
+        display: flex;
+        justify-content: space-between;
+        /* gap: 20px; Space between the projects */
+        padding: 50px;
+        background-color: rgba(252, 239, 210, 0.991);
+    }
+    
+    .project {
+        text-align: center;
+        flex: 1; /* Ensure all projects have equal width */
+        max-width: 30vw; /* Optional: Adjust max width */
+    }
+    
+    .project-image {
+        width: 100%; /* Adjust size */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space between image and button */
+        border-radius: 5px; /* Optional: Add rounded corners */
+        border: 1px solid rgba(12, 30, 13, 0.393);
+    }
+    
+    .project-link {
+        display: inline-block;
+        font-size: 1rem;
+        color:rgb(0, 0, 0);
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 15px;
+        /* border: 2px solid rgb(106, 0, 144);
+        border-radius: 5px; */
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+   
+    
